@@ -8,9 +8,9 @@ import math
 image = cv2.imread("lena.png")
 gray = cv2.cvtColor(image, cv2.COLOR_RGB2GRAY)
 
-size = 9
+size = size # enter a value here, will be taken with argparse later
 g = np.zeros((size, size))
-sigma = 2
+sigma = sigma # same with size
 
 for i in range(-math.floor(size/2), math.floor(size/2)):
 
