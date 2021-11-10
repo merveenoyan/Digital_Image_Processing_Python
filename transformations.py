@@ -45,7 +45,7 @@ def log_transformation(image_path, scaling_constant):
 
         for j in image.shape[1]:
             
-            new_img[i,j] = c * math.log(1 + image[i,j])
+            new_img[i,j] = scaling_constant * math.log(1 + image[i,j])
     
     return new_img  
     
@@ -75,7 +75,7 @@ def gamma_transformation(image_path, scaling_constant, gamma):
 
         for j in image.shape[1]:
             
-            corrected_img[i,j] = c * image[i,j]^gamma
+            corrected_img[i,j] = scaling_constant * image[i,j]^gamma
     
     return corrected_img  
     
